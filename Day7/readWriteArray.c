@@ -1,35 +1,33 @@
 #include <stdio.h>
 
-int main () {
+int main() {
     double myValue,myArray[10];
     int choice,index;
 
     do{
-        printf("\t1. Write to array\n");
-        printf("\t2. Read from array\n");
-        printf("Make a choice (-1 to Exit):");
+        printf("1. Write to array\n");
+        printf("2. Read to array\n");
+        printf("Please enter your chocice(-1 to Exit):");
         scanf("%d",&choice);
-        if(choice == -1) break;
         if(choice != 1 && choice != 2) {
-            printf("Are you kidding me!\n");
-            continue;
+        printf("You should enter 1 or 2 dijits.\n");
+        continue;
         }
-        printf("Enter array index:");
+        printf("Please enter your index:");
         scanf("%d",&index);
-        if(index < 0 || index > 9) {
-            printf("You should be in the range of 0-9\n");
-            continue;
-        }
+
         switch(choice) {
-            case 1: printf("Enter the value:");
+            case 1: printf("Please enter your value:");
             scanf("%lf",&myValue);
+            printf("The writing operation is successful.\n");
             myArray[index] = myValue;
-            printf("The write operation is successful.\n\n");
             break;
 
-            case 2: printf("myArray[%d]: %.2lf\n",index,myArray[index]);
+            case 2: printf("Your index to value is [%d]: %.2lf\n",index,myArray[index]);
             break;
+
+            default: printf("Invalid input!"); break;
         }
     }while(choice != -1);
-    return 0;
+  return 0;
 }
