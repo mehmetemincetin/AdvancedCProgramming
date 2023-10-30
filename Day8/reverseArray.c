@@ -1,19 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int numbers[6];
-
-    for(int i = 0; i <= 6;i++) {
-        printf("Enter array numbers %d. :",i);
-        scanf("%d",&numbers[i]);
+    int i,myArray[9];
+    for(i = 0; i < 10; i++){
+        printf("Enter array numbers %d. :",i+1);
+        scanf("%d",&myArray[i]);
     }
-    printf("\nOriginal order:\n");
-    for(int i = 0; i <= 6; i++) {
-        printf("%d. = %d\n",i,numbers[i]);
+     printf("\nOriginal orders:\n");
+    for(i = 0; i < 10; i++) {
+        printf("Number %d. :%d\n",i+1,myArray[i]);
     }
-    printf("\nReverse order:\n");
-    for(int i = 6; i >= 0; i--) {
-        printf("%d. = %d\n",i,numbers[i]);
+    printf("\nReverse orders:\n");
+    for(i = 9; i >=0 ;i--){
+        printf("Number %d. = %d\n",10-i,myArray[i]);
     }
     return 0;
 }

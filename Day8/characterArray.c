@@ -3,9 +3,10 @@
 int main() {
     char name[30];
 
-    printf("Please Enter your name:");
+    printf("Please enter your name:");
     fgets(name,sizeof(name),stdin);
-    printf("\nYour name is %s\n",name);
-    
+
+    printf("Your name is %s",name);
+
     return 0;
 }
